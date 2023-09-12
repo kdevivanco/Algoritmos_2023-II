@@ -1,6 +1,8 @@
 //
 // Created by MacBookPro on 11/09/23.
 //
+#include <iostream>
+#include <vector>
 
 
 template<typename T>
@@ -30,6 +32,12 @@ private:
     Set Difference(const Set &other); //O(n)
     //Find:
     T find(T data);
+
+    std::vector<T> sort();
+    // Complejidad algoritmica -> O(n) -- inorder para recorrer e insertar
+    //O(nlog(n)) -- sort
+    //O(n) -- inorder para recorrer e insertar
+
 
 //    Set SymmetricDifference(const Set &other);
 //    Set CartesianProduct(const Set &other);
