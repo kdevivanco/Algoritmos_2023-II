@@ -3,46 +3,192 @@
 //
 #include <iostream>
 #include <vector>
-
-
+#include <stack>
+using namespace std;
 template<typename T>
 class Set{
 private:
-    //todo atributos
+    struct Node{
+        T data;
+        Node* left;
+        Node* right;
+        Node(T data){
+            this->data = data;
+            left = nullptr;
+            right = nullptr;
+        }
+    };
 
-    public:
-    Set();
-    void Insert(T data); //O(1)
-    //En un BST balanceadeo -> O(log(n)) los metodos que son O(1)
-    void Remove(T data); //O(1)
-    bool Contains(T data); //O(1)
-    Set Union(const Set &other); // O(n)
-    //Si fuera con BST balanceado -> inorder iteration ->
-    // n elementos, se insertan con log(n) === O(nlog(n))
+    Node* root;
 
-    Set Intersection(const Set &other); //O(n)
-    // En BTS balanceado -> O(nlog(n))
-    // Se hace primero find (log(n)), y luego insert (log(n)), n veces
-    // Como es uno despues de otro, y no anidado es una suma de dos log(n) * n veces => O(nlog(n))
+public:
+    Set(){
+        root = nullptr;
+    }
+    void insert(T data){
+        Node* nuevo = new Node(data);
+        if (root == nullptr){
+            root = nuevo;
+            return;
+        }
+        Node* temp = root;
+        while (temp != nullptr){
+            if (data == temp->data){
+                return;
+            }
+            if (data < temp->data){
+                if (temp->left == nullptr){
+                    temp->left = nuevo;
+                    return;
+                }
+                temp = temp->left;
+            }
+            else{
+                if (temp->right == nullptr){
+                    temp->right = nuevo;
+                    return;
+                }
+                temp = temp->right;
+            }
+        }
+    }
+
+    void Remove(T data){
+        Node* temp = root;
+        Node* parent = nullptr;
+        while (temp != nullptr && temp->data != data){
+            parent = temp;
+            if (data < temp->data){
+                temp = temp->left;
+            }
+            else{
+                temp = temp->right;
+            }
+        }
+    }
+    bool Contains(T data){
+        Node* temp = root;
+        //Recorremos el arbol
+        while (temp != nullptr){
+            if (data == temp->data){
+                return true;
+            }
+            if (data < temp->data){
+                temp = temp->left;
+            }
+            else{
+                temp = temp->right;
+            }
+        }
+        return false;
+    }
+    Set<T> Union(const Set &other) {
+        Set<T> result;
+        // Recorremos el arbol en inorden y vamos insertando en el set
+        stack<Node *> s;
+        Node *temp = root;
+        while (temp != nullptr || !s.empty()) { // O(n)
+            while (temp != nullptr) { //O(log(n))
+                s.push(temp);
+                temp = temp->left;
+            }
+            temp = s.top();
+            s.pop();
+            result.insert(temp->data);
+            temp = temp->right;
+        }
 
 
+        s = stack<Node *>(); // Limpiamos el stack, empezamos con el otro:
+        temp = other.root;
+        while (temp != nullptr || !s.empty()) { // O(n)
+            while (temp != nullptr) { //O(log(n))
+                s.push(temp);
+                temp = temp->left;
+            }
+            temp = s.top();
+            s.pop();
+            result.insert(temp->data);
+            temp = temp->right;
+        }
 
-    // const Set &other ->
-    // Se envia asi para que no se modifique, es constante y no se cree un objeto nuevo (copia) del og
-    Set Difference(const Set &other); //O(n)
-    //Find:
-    T find(T data);
-
-    std::vector<T> sort();
-    // Complejidad algoritmica -> O(n) -- inorder para recorrer e insertar
-    //O(nlog(n)) -- sort
-    //O(n) -- inorder para recorrer e insertar
+        return result;
+    }
 
 
-//    Set SymmetricDifference(const Set &other);
-//    Set CartesianProduct(const Set &other);
-    ~Set();
-    void print();
+    Set Intersection(const Set &other){
+        Set<T> result;
+        Node* temp = root;
+        while (temp != nullptr){
+            if (other.Contains(temp->data)){
+                result.Insert(temp->data);
+            }
+            temp = temp->left;
+        }
+        return result;
+    }
+
+    Set Difference(const Set &other){
+        Set<T> result;
+        Node* temp = root;
+        while (temp != nullptr){
+            if (!other.Contains(temp->data)){
+                result.Insert(temp->data);
+            }
+            temp = temp->left;
+        }
+        return result;
+    }
+
+    bool find(T data){
+        Node* temp = root;
+        while (temp != nullptr){
+            if (data == temp->data){
+                return true;
+            }
+            if (data < temp->data){
+                temp = temp->left;
+            }
+            else{
+                temp = temp->right;
+            }
+        }
+        return false;
+    }
+
+    void display(){
+        inorder_iter();
+    }
+
+    void inorder_iter(){
+        stack<Node*> s;
+        Node* temp = root;
+        while (temp != nullptr || !s.empty()){
+            while (temp != nullptr){
+                s.push(temp);
+                temp = temp->left;
+            }
+            temp = s.top();
+            s.pop();
+            cout << temp->data << " ";
+            temp = temp->right;
+        }
+        cout << endl;
+    }
+
+    //destructor:
+    ~Set(){
+        destructor(root);
+    }
+
+    void destructor(Node* node){
+        if (node == nullptr){
+            return;
+        }
+        destructor(node->left);
+        destructor(node->right);
+        delete node;
+    }
 };
 
 //Pregunta de examen: Como implementar la interseccion

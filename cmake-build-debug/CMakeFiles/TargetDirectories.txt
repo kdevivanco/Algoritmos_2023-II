@@ -1,0 +1,3 @@
+/Users/macbookpro/Desktop/UTEC/2023-II/Algoritmos/cmake-build-debug/CMakeFiles/S5_C1_unordered_map.cpp.dir
+/Users/macbookpro/Desktop/UTEC/2023-II/Algoritmos/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/macbookpro/Desktop/UTEC/2023-II/Algoritmos/cmake-build-debug/CMakeFiles/rebuild_cache.dir
