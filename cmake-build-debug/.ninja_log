@@ -1,11 +1,10 @@
 # ninja log v5
 10	798	1692755157710737875	CMakeFiles/Algoritmos.dir/S2_C2_CR_SortedList.cpp.o	e103888e55143895
 10	839	1692753701283447009	CMakeFiles/Algoritmos.dir/S2_C1_ForwardList.cpp.o	fb6d5535c41f732d
-9	873	1694475485313239102	CMakeFiles/S5_C1.cpp.dir/S5_C1.cpp.o	8115159e7b6e7395
 1	772	1692662532321467257	CMakeFiles/Algoritmos.dir/S1_C3_EjercicioQueue.cpp.o	8eb5a2e01e90ac7
+9	873	1694475485313239102	CMakeFiles/S5_C1.cpp.dir/S5_C1.cpp.o	8115159e7b6e7395
 873	955	1694475485398544554	S5_C1.cpp	f55bcb798e3f4d4
-1	99	1695078861895804314	build.ninja	98d8e7435106c118
-798	879	1692755157794305625	Algoritmos	25081f4016daacff
-1	843	1695080474619093277	CMakeFiles/S5_C1_unordered_map.cpp.dir/S6_C1_CR_bst.cpp.o	2a8ac89c284ff629
-1	986	1695080474763409727	CMakeFiles/S5_C1_unordered_map.cpp.dir/S5_C1_unordered_map.cpp.o	f2c275dcc495c9a2
+1	99	1695261190910740649	build.ninja	98d8e7435106c118
 6	650	1695081431000340419	CMakeFiles/S5_C1_unordered_map.cpp.dir/S6_C1_CR_bst.cpp.o	2a8ac89c284ff629
+1	986	1695080474763409727	CMakeFiles/S5_C1_unordered_map.cpp.dir/S5_C1_unordered_map.cpp.o	f2c275dcc495c9a2
+798	879	1692755157794305625	Algoritmos	25081f4016daacff

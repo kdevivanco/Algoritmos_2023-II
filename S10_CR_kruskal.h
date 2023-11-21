@@ -15,7 +15,7 @@ struct Edge
 vector<Edge> kruskal(vector<char> vertices, vector<Edge> aristas){
     //usar el DisjointSets
     vector<Edge> solucion;
-    DisjoinSetArray<char> ds(vertices);
+    DSHash<char> ds(vertices);
     //1- ordenar las aristas en funcion del peso
 
     //2- Recorrer todas las aristas y agregar al árbol solucion

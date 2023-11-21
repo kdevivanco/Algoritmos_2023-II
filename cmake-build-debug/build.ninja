@@ -61,6 +61,12 @@ build CMakeFiles/S5_C1_unordered_map.cpp.dir/S6_C1_CR_bst.cpp.o: CXX_COMPILER__S
   OBJECT_DIR = CMakeFiles/S5_C1_unordered_map.cpp.dir
   OBJECT_FILE_DIR = CMakeFiles/S5_C1_unordered_map.cpp.dir
 
+build CMakeFiles/S5_C1_unordered_map.cpp.dir/Tareas/Tarea-s5-bst/bst-grupoo_1/main.cpp.o: CXX_COMPILER__S5_C1_unordered_map.2ecpp_Debug /Users/macbookpro/Desktop/UTEC/2023-II/Algoritmos/Tareas/Tarea-s5-bst/bst-grupoo_1/main.cpp || cmake_object_order_depends_target_S5_C1_unordered_map.cpp
+  DEP_FILE = CMakeFiles/S5_C1_unordered_map.cpp.dir/Tareas/Tarea-s5-bst/bst-grupoo_1/main.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/S5_C1_unordered_map.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/S5_C1_unordered_map.cpp.dir/Tareas/Tarea-s5-bst/bst-grupoo_1
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target S5_C1_unordered_map.cpp
@@ -69,7 +75,7 @@ build CMakeFiles/S5_C1_unordered_map.cpp.dir/S6_C1_CR_bst.cpp.o: CXX_COMPILER__S
 #############################################
 # Link the executable S5_C1_unordered_map.cpp
 
-build S5_C1_unordered_map.cpp: CXX_EXECUTABLE_LINKER__S5_C1_unordered_map.2ecpp_Debug CMakeFiles/S5_C1_unordered_map.cpp.dir/S5_C1_unordered_map.cpp.o CMakeFiles/S5_C1_unordered_map.cpp.dir/S6_C1_CR_bst.cpp.o
+build S5_C1_unordered_map.cpp: CXX_EXECUTABLE_LINKER__S5_C1_unordered_map.2ecpp_Debug CMakeFiles/S5_C1_unordered_map.cpp.dir/S5_C1_unordered_map.cpp.o CMakeFiles/S5_C1_unordered_map.cpp.dir/S6_C1_CR_bst.cpp.o CMakeFiles/S5_C1_unordered_map.cpp.dir/Tareas/Tarea-s5-bst/bst-grupoo_1/main.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/S5_C1_unordered_map.cpp.dir
   POST_BUILD = :

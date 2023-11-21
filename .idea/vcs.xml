@@ -2,11 +2,16 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ProyectoFinal/KdTrees" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Tareas" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Tareas/Tarea-Ecuaciones/evaluating-expressions-grupo2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Tareas/Tarea-s2-Listas" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Tareas/Tarea-s5-ChainHash/hash-table-gruupo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Tareas/Tarea-s5-bst/bst-grupoo_1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Tareas/btree-grupouno" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Tareas/circular-array-grupo1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Tareas/hashgraph-grupo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Tareas/pathfinding-grupopathfinding" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ejercicios" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ejercicios/Algoritmos-Bucket-Sort" vcs="Git" />
   </component>

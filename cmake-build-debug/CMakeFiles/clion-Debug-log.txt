@@ -1,4 +1,10 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/macbookpro/Desktop/UTEC/2023-II/Algoritmos -B /Users/macbookpro/Desktop/UTEC/2023-II/Algoritmos/cmake-build-debug
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/macbookpro/Desktop/UTEC/2023-II/Algoritmos/cmake-build-debug
+CMake Error at CMakeLists.txt:6 (add_executable):
+  The target name "Tareas/pathfinding-grupopathfinding/pathfinding.cpp" is
+  reserved or not valid for certain CMake features, such as generator
+  expressions, and may result in undefined behavior.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/macbookpro/Desktop/UTEC/2023-II/Algoritmos/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/Users/macbookpro/Desktop/UTEC/2023-II/Algoritmos/cmake-build-debug/CMakeFiles/CMakeError.log".
